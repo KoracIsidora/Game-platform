@@ -5,9 +5,9 @@ const Footer = (props) => {
     return (
         <footer className='footer'>
             <p className="company-desc">
-                Најјача компанија на свету
+                Coetus game platform
             </p>
-            <p>&copy; Ја</p>
+            <p>&copy; Isidora Korac</p>
             <Logo />
         </footer>
     )

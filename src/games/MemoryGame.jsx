@@ -62,7 +62,7 @@ const MemoryGame = ({user}) => {
 
     return (
         <div>
-            <p>{time}</p>
+            <p>Time: {time}</p>
             {cards.map((card,index) => {
                 return <Card 
                         key={index} 

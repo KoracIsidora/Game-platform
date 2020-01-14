@@ -14,7 +14,8 @@ const Highscore = ({ history }) => {
   },[])
 
     return (
-        <ol>
+        <ol className='highscores'>
+          <h1>High scores: </h1>
             {scores.sort((b,a) => {
               return a.score - b.score
             }).slice(0,10).map((score) => {

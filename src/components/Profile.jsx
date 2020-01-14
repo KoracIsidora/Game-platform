@@ -13,13 +13,13 @@ const Profile = ({ match }) => {
     
 
     return(
-        <>
-            <p><strong>Име</strong>:   {user.name}</p>
-            <p><strong>Презиме</strong>:   {user.surname}</p>
-            <p><strong>Корисничко име</strong>:   {user.username}</p>
+        <div className='profile'>
+            <p><strong>Name</strong>:   {user.name}</p>
+            <p><strong>Surname</strong>:   {user.surname}</p>
+            <p><strong>Username</strong>:   {user.username}</p>
             <p><strong>E-mail</strong>:   {user.email}</p>
             <img src={user.picture ? user.picture : ''} alt="user-avatar" />
-        </>
+        </div>
     )
 }
 

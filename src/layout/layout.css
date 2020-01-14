@@ -1,15 +1,20 @@
 * {
     padding: 0;
     margin: 0;
-    background-image: url('https://cdn.shopify.com/s/files/1/0455/9189/products/GE017-memory-matching-game-wood-tiles-childrens-game-handmade-natural-safe-toys-smiling-tree-toys-2.jpg?v=1522892919');
+    color: whitesmoke;
+    max-width: 100%;
+    font-family: monospace;
+}
+
+body{
+    background-image: url('http://getwallpapers.com/wallpaper/full/0/c/b/863522-most-popular-abstract-gaming-wallpapers-1080p-2560x1440-hd-for-mobile.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-size: cover;
 }
 
 nav {
     width: 15%;
-    background-color: #f1f1f1;
     height: 99%; /* Full height */
     position: fixed; /* Make it stick, even on scroll */
     overflow: auto; /* Enable scrolling if the sidenav has too much content */
@@ -31,39 +36,128 @@ nav button{
     display: inline-block;
     width: 100%;
     margin-top: 5px;
+    padding: 7%;
+    margin-bottom: 10px;
+    outline: none;
+    background-color: transparent;
 }
 
+nav button:hover{
+    cursor: pointer;
+    
+}
 
-.main{
-    height: 100vh;
+.main {
+    height: 160vh;
     width: 80%;
     margin-left: 20%;
+    margin-right: 0;
+    text-align: center;
 }
 
 .nav-items{
     margin-top: 25px;
+    max-width: 100%;
+}
+
+.header-btn{
+   width: 100%;
 }
 
 .footer{
     height: 10vh;
     margin-left: 20%;
+    position: sticky;
+
 }
 
 input{
     padding: 10px;
-    display: inline;
     text-align: center;
-    margin: 15px;   
+    margin: 15px; 
+    outline: none;  
+    max-width: 100%;
+    background-color: transparent;
+}
+
+input[type=submit]{
+    cursor: pointer;
 }
 
 form{
     text-align: center;
-    border: 1px solid black;
-    width: 300px;
+    width: 200px;
     height: 570px;
-    display: flexbox;
     justify-content: center;
+    max-width: 100%;
+    margin-top: 2%;
+    margin-bottom: 0;
 }
+
+.highscores{
+    text-align: left;
+    margin: 10px;
+    padding: 5px;
+    margin-top: 2%;
+}
+
+ol li {
+    padding: 5px;
+    width: fit-content;
+}
+
+ol li:hover:after{
+    width: auto; 
+}
+
+ol li:hover{
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}
+
+ol li::after{
+    content: ""; 
+    display: block; 
+    width: 0%; 
+    padding-top: 20px;
+    border-bottom: 3px dotted red;
+    transition: 1s ease-in; 
+}
+
+.logo{
+max-width: 100%;
+}
+
+.profile {
+    font-size: 27px;
+}
+
+@media only screen and (max-width: 1000px){
+    body{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: url('http://getwallpapers.com/wallpaper/full/0/c/b/863522-most-popular-abstract-gaming-wallpapers-1080p-2560x1440-hd-for-mobile.jpg');
+    }
+
+    nav{
+        width: 20%;
+    }
+
+    form{
+        margin-left: 50px;
+    }
+
+    .highscores{
+        margin-left: 50px;
+    }
+
+}
+
+
+
+
 
 
 

@@ -1,9 +1,9 @@
-import  React  from "react"
+import React from "react";
 
 const Logo = () => {
-    return(
+    return (
         <>
-            <img src='https://image.freepik.com/free-vector/joystick-gamer-logo_6689-10.jpg' alt='logo platforme' />
+            <img src='https://image.flaticon.com/icons/png/512/1723/1723810.png' alt='logo platforme' className='logo' />
         </>
     )
 }

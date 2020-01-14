@@ -15,7 +15,7 @@ const App = () => {
     <>
     <Router>
       <Header user={user} logedIn={user} setUser={setUser}/>
-      <Content setUser={setUser} user={user}/>
+      <Content setUser={setUser} user={user} logedIn={user}/>
       <Footer />
     </Router>
     </>

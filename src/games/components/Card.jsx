@@ -1,27 +1,27 @@
 import React from 'react';
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 
-const Card = ({ card,onClick,isFlipped }) => {
+const Card = ({ card, onClick, isFlipped }) => {
     return (
         <Flippy
             isFlipped={isFlipped}
             flipDirection="horizontal"
-            style={{ width: '23%', height: '200px',margin:'5px',float:'left'}} /// these are optional style, it is not necessary
+            style={{ width: '23%', height: '170px', margin: '5px', float: 'left' }}
         >
 
             <FrontSide
-            style={{
-                backgroundColor: '#175852', fontSize: '80px',textAlign: 'center', lineHeight: '11px'
-            }} onClick={onClick}
+                style={{
+                    backgroundColor: 'rgb(24, 112, 199)', fontSize: '80px', textAlign: 'center', lineHeight: '11px', borderRadius:'5px'
+                }} onClick={onClick}
             >
-            ?
+                ?
             </FrontSide>
             <BackSide
-            style={{ backgroundColor: '#175852', fontSize: '80px',textAlign: 'center', lineHeight: '11px'}}>
-            {card.data}
+                style={{ backgroundColor: 'rgb(24, 112, 199)', fontSize: '80px', textAlign: 'center', lineHeight: '11px', borderRadius:'5px' }}>
+                <p className='card'>{card.data}</p>
             </BackSide>
         </Flippy>
     )
 }
 
-export default Card
+export default Card;
