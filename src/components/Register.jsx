@@ -27,8 +27,7 @@ const Register = ({ setUser, history }) => {
     }, [password])
 
     useEffect(() => {
-        setIsSame(pwConfirm === password)
-        console.log(pwConfirm === password)
+        setIsSame(pwConfirm === password);
     }, [pwConfirm, password])
 
     function handleSubmit() {
@@ -45,40 +44,40 @@ const Register = ({ setUser, history }) => {
             })
     }
 
-    function checkSame(){
-        if(password !== pwConfirm){
+    function checkSame() {
+        if (password !== pwConfirm) {
             setMessage(mess);
         }
     }
 
     return (
-        <form>
-            <h1>Register</h1>
-            <input type="text" placeholder="Name" required onInput={e => {
-                setName(e.target.value)
-            }} />
-            <input type="text" placeholder="Surname" required onInput={e => {
-                setSurname(e.target.value)
-            }} />
+        <div className='forma'>
+            <form>
+                <h1>Register</h1>
+                <input type="text" placeholder="Name" required onInput={e => {
+                    setName(e.target.value)
+                }} />
+                <input type="text" placeholder="Surname" required onInput={e => {
+                    setSurname(e.target.value)
+                }} />
 
-            <input type="text" placeholder="Username" required onInput={e => {
-                setUsername(e.target.value)
-            }} />
-            <input type="email" placeholder="Email" required onInput={e => {
-                setEmail(e.target.value)
-            }} />
-            <input type="password" placeholder="Password" required onInput={e => {
-                setPassword(e.target.value)
-            }} />
-            <input type="password" placeholder="Confirm password" required onInput={e => {
-                setPwConfirm(e.target.value)
-            }} />
-
-
-            <input type="submit" value="Register" onClick={e => { e.preventDefault(); handleSubmit(); checkSame() }} />
-            <p>*Password must have 8 letters and a number.</p>
-            <p>{message}</p>
-        </form>
+                <input type="text" placeholder="Username" required onInput={e => {
+                    setUsername(e.target.value)
+                }} />
+                <input type="email" placeholder="Email" required onInput={e => {
+                    setEmail(e.target.value)
+                }} />
+                <input type="password" placeholder="Password" required onInput={e => {
+                    setPassword(e.target.value)
+                }} />
+                <input type="password" placeholder="Confirm password" required onInput={e => {
+                    setPwConfirm(e.target.value)
+                }} />
+                <input type="submit" value="Register" onClick={e => { e.preventDefault(); handleSubmit(); checkSame() }} />
+                <p>*Password must have 8 letters and a number.</p>
+                <p>{message}</p>
+            </form>
+        </div>
     )
 }
 

@@ -7,10 +7,11 @@
 }
 
 body{
-    background-image: url('http://getwallpapers.com/wallpaper/full/0/c/b/863522-most-popular-abstract-gaming-wallpapers-1080p-2560x1440-hd-for-mobile.jpg');
+    background-image: url('https://backgrounddownload.com/wp-content/uploads/2018/09/retro-gamer-background-2.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 nav {
@@ -43,16 +44,14 @@ nav button{
 }
 
 nav button:hover{
-    cursor: pointer;
-    
+    cursor: pointer; 
 }
 
 .main {
-    height: 160vh;
-    width: 80%;
+    height: 100vh;
+    width: 70%;
     margin-left: 20%;
     margin-right: 0;
-    text-align: center;
 }
 
 .nav-items{
@@ -68,7 +67,7 @@ nav button:hover{
     height: 10vh;
     margin-left: 20%;
     position: sticky;
-
+    float: right;
 }
 
 input{
@@ -78,6 +77,7 @@ input{
     outline: none;  
     max-width: 100%;
     background-color: transparent;
+    font-size: 15px;
 }
 
 input[type=submit]{
@@ -86,24 +86,34 @@ input[type=submit]{
 
 form{
     text-align: center;
-    width: 200px;
-    height: 570px;
-    justify-content: center;
+    width: 250px;
+    height: fit-content;
+    backdrop-filter: blur(10px);
     max-width: 100%;
-    margin-top: 2%;
     margin-bottom: 0;
+    border: 2px solid blanchedalmond;
+    box-shadow: 5px 10px 6px 10px #888888;
+    font-size: 20px;  
+}
+
+.forma{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
 }
 
 .highscores{
-    text-align: left;
-    margin: 10px;
     padding: 5px;
     margin-top: 2%;
+    height: fit-content;
 }
 
 ol li {
     padding: 5px;
     width: fit-content;
+    color: whitesmoke;
+    font-size: 20px;
 }
 
 ol li:hover:after{
@@ -125,20 +135,40 @@ ol li::after{
     transition: 1s ease-in; 
 }
 
+ol h1{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 35px;
+}
+
 .logo{
 max-width: 100%;
 }
 
 .profile {
     font-size: 27px;
+    margin-top:2% ;
 }
 
-@media only screen and (max-width: 1000px){
+.time{
+    font-size: 20px;
+    text-align: center;
+}
+
+form h1 {
+    margin-top: 20px;
+}
+
+.game{
+    margin-top: 2%;
+}
+
+@media only screen and (max-width: 1200px){
     body{
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        background-image: url('http://getwallpapers.com/wallpaper/full/0/c/b/863522-most-popular-abstract-gaming-wallpapers-1080p-2560x1440-hd-for-mobile.jpg');
+        background-image: url('https://backgrounddownload.com/wp-content/uploads/2018/09/retro-gamer-background-2.jpg');
     }
 
     nav{
@@ -146,15 +176,60 @@ max-width: 100%;
     }
 
     form{
-        margin-left: 50px;
+        margin-left: 15px;
+        width: 220px;
+        height: fit-content;
     }
 
     .highscores{
         margin-left: 50px;
     }
 
+    .main{
+        height: 120vh;
+    }
+
+    .memory{
+        float: right;
+    }
+
 }
 
+/* .board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+  } */
+
+/* .board-row{
+    font-size: 100px;
+    color: black;
+}
+
+.btnsqr{
+    width: 200px;
+    height: 200px;
+    font-size: 20px;
+    color: black;
+}
+
+.status{
+    font-size: 100px;
+    color: black;
+} */
+
+/* .flippy-cardContainer-wrapper{
+    border: 2px solid white;
+}
+
+.flippy-cardContainer{
+    border: 2px solid red;
+}
+
+.flippy-card{
+    border: 2px solid orange;
+    
+} */
 
 
 

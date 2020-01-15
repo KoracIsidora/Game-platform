@@ -14,6 +14,7 @@ const Profile = ({ match }) => {
 
     return(
         <div className='profile'>
+            <h1>Gamer profile</h1>
             <p><strong>Name</strong>:   {user.name}</p>
             <p><strong>Surname</strong>:   {user.surname}</p>
             <p><strong>Username</strong>:   {user.username}</p>

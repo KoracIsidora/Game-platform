@@ -38,18 +38,15 @@ const MemoryGame = ({user}) => {
     
 
     const onCardClick = (index) => {
-        console.log(index)
         if(selected.length === 0){
             setSelected([index])
         }
         else if(selected.length === 1){
             if(cards[selected[0]].data === cards[index].data){
-                console.log("NASAO ISTE")
                 setCorrect(correct.concat(selected[0],index))
                 setSelected([])
             }
             else{
-                console.log("NAPRAVIO TAJMAUT")
                 setSelected([selected[0],index])
                 setTimeout(() => {
                     setSelected([])
@@ -61,8 +58,8 @@ const MemoryGame = ({user}) => {
    
 
     return (
-        <div>
-            <p>Time: {time}</p>
+        <div className='game'>
+            <p className='time'>Time: {time}</p>
             {cards.map((card,index) => {
                 return <Card 
                         key={index} 

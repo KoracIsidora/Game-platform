@@ -32,8 +32,6 @@ const Header = ({ logedIn, setUser,history,user }) => {
                     <Link to='/login'><button className='header-btn'>Login</button></Link>
                     </div>
                 </nav>
-                
-                
             </header>
         )
     }

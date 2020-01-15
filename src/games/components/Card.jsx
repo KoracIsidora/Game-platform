@@ -3,24 +3,27 @@ import Flippy, { FrontSide, BackSide } from 'react-flippy';
 
 const Card = ({ card, onClick, isFlipped }) => {
     return (
-        <Flippy
-            isFlipped={isFlipped}
-            flipDirection="horizontal"
-            style={{ width: '23%', height: '170px', margin: '5px', float: 'left' }}
-        >
-
-            <FrontSide
-                style={{
-                    backgroundColor: 'rgb(24, 112, 199)', fontSize: '80px', textAlign: 'center', lineHeight: '11px', borderRadius:'5px'
-                }} onClick={onClick}
+        <div className='memory'>
+            <Flippy
+                isFlipped={isFlipped}
+                flipDirection="vertical"
+                style={{ width: '20%', height: '170px', margin: '10px', float: 'left', textAlign: 'center', display: 'flex', justifyContent: 'center' }}
             >
-                ?
+
+                <FrontSide
+                    style={{
+                        backgroundColor: 'rgb(146, 39, 143)', fontSize: '80px', textAlign: 'center', lineHeight: '11px', borderRadius: '5px', display: 'flex', justifyContent: 'center', width: '20%',  boxShadow:'0px -2px 20px 2px rgba(0, 0, 0, 0.4)' 
+                    }}
+                    onClick={onClick}
+                >
+                    ?
             </FrontSide>
-            <BackSide
-                style={{ backgroundColor: 'rgb(24, 112, 199)', fontSize: '80px', textAlign: 'center', lineHeight: '11px', borderRadius:'5px' }}>
-                <p className='card'>{card.data}</p>
-            </BackSide>
-        </Flippy>
+                <BackSide
+                    style={{ backgroundColor: 'rgb(146, 39, 143)', fontSize: '80px', textAlign: 'center', lineHeight: '11px', borderRadius: '5px', display: 'flex', justifyContent: 'center', width:'20%' , boxShadow:'0px -2px 20px 2px rgba(0, 0, 0, 0.4)' }}>
+                    {card.data}
+                </BackSide>
+            </Flippy>
+        </div>
     )
 }
 

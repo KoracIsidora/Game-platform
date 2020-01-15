@@ -16,7 +16,7 @@ const Score = ({score, userID, history}) => {
     return (
         <li onClick={() => {
             history.push(`/profile/${userID}`)
-        }}>{score} {user}</li>
+        }}>{user} {score}</li>
     )
 }
 

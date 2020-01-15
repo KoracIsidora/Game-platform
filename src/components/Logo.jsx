@@ -1,9 +1,10 @@
 import React from "react";
+import logo from '../assets/logo.png';
 
 const Logo = () => {
     return (
         <>
-            <img src='https://image.flaticon.com/icons/png/512/1723/1723810.png' alt='logo platforme' className='logo' />
+            <img src={logo} alt='logo platforme' className='logo' />
         </>
     )
 }
