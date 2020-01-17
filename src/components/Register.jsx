@@ -11,7 +11,10 @@ const Register = ({ setUser, history }) => {
     const [validPw, setValidPw] = useState(false)
     const [isSame, setIsSame] = useState(false)
     const [message, setMessage] = useState('');
-    let mess = 'Passwords must be the same.'
+    let mess = 'Passwords must be the same.';
+    let porukica = 'Invalid email.';
+    const [validEmail, setValidEm] = useState('');
+    const [mail, setMail] = useState('');
 
     useEffect(() => {
         function isValidPw() {
@@ -36,7 +39,7 @@ const Register = ({ setUser, history }) => {
         register({ name, surname, username, email, password })
             .then(data => {
                 console.log(data);
-                if (data.success) {
+                if (data.success && validEmail === true) {
                     setUser(data.user)
                     history.push('/memory-game')
                 }
@@ -47,6 +50,24 @@ const Register = ({ setUser, history }) => {
     function checkSame() {
         if (password !== pwConfirm) {
             setMessage(mess);
+        }
+    }
+
+    useEffect(() => {
+        function isValidEmail() {
+            if ((/^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(email)) {
+                setValidEm(true);
+            }
+            else {
+                setValidEm(false);
+            }
+        }
+        isValidEmail();
+    }, [email]);
+
+    function validMail() {
+        if (validEmail === false) {
+            setMail(porukica);
         }
     }
 
@@ -73,9 +94,10 @@ const Register = ({ setUser, history }) => {
                 <input type="password" placeholder="Confirm password" required onInput={e => {
                     setPwConfirm(e.target.value)
                 }} />
-                <input type="submit" value="Register" onClick={e => { e.preventDefault(); handleSubmit(); checkSame() }} />
+                <input type="submit" value="Register" onClick={e => { e.preventDefault(); handleSubmit(); checkSame(); validMail() }} />
                 <p>*Password must have 8 letters and a number.</p>
                 <p>{message}</p>
+                <p>{mail}</p>
             </form>
         </div>
     )

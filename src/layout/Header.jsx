@@ -12,8 +12,8 @@ const Header = ({ logedIn, setUser,history,user }) => {
                     <Link to='/'><Logo /></Link>
                     <hr />
                     <div className='nav-items'>
-                    <Link to={`/profile/${user.user_id}`}>{user.username}</Link>
                     <Link to='/'><button className='header-btn' id="logout-btn" onClick={() => setUser()}>Logout</button></Link>
+                    <Link to={`/profile/${user.user_id}`} style={{fontSize:'25px'}}>{user.username}</Link>
                     <Link to='/memory-game'><button className='header-btn'>Memory game</button></Link>
                     </div>
                 </nav>

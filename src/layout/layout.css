@@ -9,8 +9,7 @@
 body{
     background-image: url('https://backgrounddownload.com/wp-content/uploads/2018/09/retro-gamer-background-2.jpg');
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 20%;
     background-position: center;
 }
 
@@ -40,7 +39,7 @@ nav button{
     padding: 7%;
     margin-bottom: 10px;
     outline: none;
-    background-color: transparent;
+    background-color: rgb(46, 44, 44);
 }
 
 nav button:hover{
@@ -82,11 +81,18 @@ input{
 
 input[type=submit]{
     cursor: pointer;
+    background-color: rgb(46, 44, 44);
+}
+
+::placeholder{
+    color: blanchedalmond;
+    opacity: 1;
 }
 
 form{
+    color: blanchedalmond;
     text-align: center;
-    width: 250px;
+    width: 20%;
     height: fit-content;
     backdrop-filter: blur(10px);
     max-width: 100%;
@@ -165,8 +171,7 @@ form h1 {
 
 @media only screen and (max-width: 1200px){
     body{
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 40%;
         background-position: center;
         background-image: url('https://backgrounddownload.com/wp-content/uploads/2018/09/retro-gamer-background-2.jpg');
     }
